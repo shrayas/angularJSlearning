@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="controllers.js"></script>
+  </head>
+
+  <body ng-controller="PhoneListController">
+
+    <p>Total number of fruits: {{fruits.length}}</p>
+
+    Filter <input ng-model="query" />
+
+    <hr/>
+    Filtering by {{query}} and sorting by {{orderProp}}
+    <hr/>
+
+    Sort by:
+    <select ng-model="orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="tasteRating">Worst to best</option>
+      <option value="-tasteRating">best to worst</option>
+    </select>
+
+    <ul>
+
+      <li ng-repeat="fruit in fruits | filter:query | orderBy:orderProp">
+        {{fruit.name}} is {{fruit.taste}}
+      </li>
+
+    </ul>
+
+  </body>
+</html>

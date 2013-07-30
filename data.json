@@ -1,6 +1,4 @@
-function PhoneListController($scope) {
-
-  $scope.fruits = [
+{"data":[
     {
       "name":"Apple",
       "taste":"Good",
@@ -18,9 +16,5 @@ function PhoneListController($scope) {
       "taste":"Yuck",
       "color":"orange",
       "tasteRating":0
-    }
-  ];
-
-  $scope.orderProp = "name"
-
+    }]
 }

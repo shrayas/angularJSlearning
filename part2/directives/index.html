@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="MainC">
+
+  Name:
+  <input type="text" focus ng-model="user.name" />
+  <button ng-click="greet()" value="greet">Greet</button>
+  <h3>{{message}}</h3>
+</body>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="MainController">
+
+  <ul>
+    <li ng-repeat="dev in devs">
+      {{dev.name}} {{dev.age}}
+    </li>
+  </ul>
+
+</body>
